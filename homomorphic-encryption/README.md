@@ -1,8 +1,12 @@
-# HE scenario
+# homomorphic-encryption scenario
 
-The HE can provide certain types of operations on encrypted data without decrypting the encrypted data.
+The homomorphic-encryption can provide certain types of operations on encrypted data without decrypting the encrypted data.
 
-## Case
+## Case 1.
+
+![Alice transfers money to Bob](./static/Alice%20transfers%20money%20to%20Bob.png)
+
+## Case 2.
 
 For some reason the data needs to be encrypted and computed on the ciphertext.  
 For example, the following table:
@@ -14,17 +18,17 @@ For example, the following table:
 ||item3|2000|
 ||results|3000|
 
-## Contract
+### Contract
 
-### Initialize
+#### Initialize
 
 **Initialize()** set a default set of encryption parameters for the contract
 
-### Create
+#### Create
 
 **Create(args string)** create a form named args that can be used to save data
 
-### Submit
+#### Submit
 
 **Submit(args1 string, args2 string, args3 []byte)** can record a row of data on a form named args1
 
@@ -32,11 +36,11 @@ For example, the following table:
 |--- | --- | --- |
 ||args2| args3|
 
-### Query
+#### Query
 
 **Query(args string)** query the result of the calculation of the data on the form named args, the ciphertext calculation is done here
 
-## Use
+### Use
 
 can use the sdk to make contract calls or use the key tool to process the data and then make the calls.
 
